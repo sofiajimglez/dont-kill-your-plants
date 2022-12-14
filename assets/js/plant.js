@@ -4,5 +4,5 @@ class Plant {
         this.water = 5;
         this.space = 10;
         this.health = 10;
-    }
+    };
 }
