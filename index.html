@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don't kill your plants</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don't kill your plants</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <button id="start">Start</button>
+  <button id="start">Start</button>
 
-    <div class="game-container">
+  <div class="game-container">
 
-        <section>
-            <div class="top-info">
-                <h3 id="season-info">Season</h3>
-                <h3 id="round-info">Round: <span>0</span></h3>
-            </div>
+    <section>
+      <div class="top-info">
+        <h3 id="season-info">Season</h3>
+        <h3>Round: <span id="round-info">0</span></h3>
+      </div>
 
-            <div id="plant-stats">
-                <p id="sunlight">Sunlight: <span>5</span></p>
-                <p id="water">Water: <span>5</span></p>
-                <p id="space">Space: <span>10</span></p>
-                <p id="health">Health: <span>10</span></p>
-            </div>
+      <div id="plant-stats">
+        <p id="sunlight">Sunlight: <span>5</span></p>
+        <p id="water">Water: <span>5</span></p>
+        <p id="space">Space: <span>10</span></p>
+        <p id="health">Health: <span>10</span></p>
+      </div>
 
-            <div id="cards-container" class="cards-container">
-                <div id="card-1" class="card">
-                    <p>Card 1</p>
-                    <div class="card-btns">
-                        <button class="use-btn">Use</button>
-                        <button class="remove-btn">Remove</button>
-                    </div>
-                </div>
-                <div id="card-2" class="card">
-                    <p>Card 2</p>
-                    <div class="card-btns">
-                        <button class="use-btn">Use</button>
-                        <button class="remove-btn">Remove</button>
-                    </div>
-                </div>
-                <div id="card-3" class="card">
-                    <p>Card 3</p> 
-                    <div class="card-btns">
-                        <button id="use-btn">Use</button>
-                        <button id="remove-btn">Remove</button>
-                    </div>
-                </div>
-            </div>
-        
-        </section>
+      <div id="cards-container" class="cards-container">
+        <div id="card-1" class="card">
+          <p>Card 1</p>
+          <div class="card-btns" id="card-1-btns">
+            <button class="use-btn">Use</button>
+            <button class="remove-btn">Remove</button>
+          </div>
+        </div>
 
-        <section>
-            <img class="plant-img" src="#" id="plant-img">
-        </section>
+        <div id="card-2" class="card">
+          <p>Card 2</p>
+          <div class="card-btns" id="card-2-btns">
+            <button class="use-btn">Use</button>
+            <button class="remove-btn">Remove</button>
+          </div>
+        </div>
 
-    </div>
+        <div id="card-3" class="card">
+          <p>Card 3</p>
+          <div class="card-btns" id="card-3-btns">
+            <button class="use-btn">Use</button>
+            <button id="remove-btn">Remove</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <img class="plant-img" src="#" id="plant-img">
+    </section>
+
+  </div>
 
 
 
-    <script src="./assets/js/card.js"></script>
-    <script src="./assets/js/plant.js"></script>
-    <script src="./assets/js/season.js"></script>
-    <script src="./assets/js/game.js"></script>
-    <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/card.js"></script>
+  <script src="./assets/js/plant.js"></script>
+  <script src="./assets/js/season.js"></script>
+  <script src="./assets/js/game.js"></script>
+  <script src="./assets/js/index.js"></script>
 </body>
+
 </html>
