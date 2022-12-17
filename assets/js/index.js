@@ -7,9 +7,9 @@ const round = document.getElementById('round-info');
 
 
 startBtn.onclick = () => {
-    game.start();
-    console.log(game.cards);
-    console.log(game.pickedCards);
+  game.start();
+  console.log(game.cards);
+  console.log(game.pickedCards);
 };
 
 

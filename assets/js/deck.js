@@ -1,7 +1,7 @@
 function createDeck() {
-    const DECK = [
-        
-    ];
+  const DECK = [
 
-    return DECK;
+  ];
+
+  return DECK;
 }
