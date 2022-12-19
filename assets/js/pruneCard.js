@@ -8,8 +8,8 @@ class PruneCard extends Card {
     plant.space += 1;
   }
 
-  discard(this, pickedCards) {
-    super.discard(this, pickedCards);
+  discard(card, pickedCards) {
+    super.discard(card, pickedCards);
   }
 }
 

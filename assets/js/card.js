@@ -23,10 +23,8 @@ class Card {
   use() {};
 
   discard(card, arr) {
-    console.log(card);
-    console.log(arr);
-    
-    //let i = pickedCards.indexOf(card);
-    //pickedCards.splice(i, 1);
+    let i = arr.indexOf(card);
+    arr.splice(i, 1);
+    this.cardsContainer.removeChild(this.cardNode);
   };
 }

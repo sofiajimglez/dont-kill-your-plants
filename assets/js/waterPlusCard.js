@@ -8,8 +8,8 @@ class WaterPlusCard extends Card {
     plant.water += 3;
   }
 
-  discard(this, pickedCards) {
-    super.discard(this, pickedCards);
+  discard(card, pickedCards) {
+    super.discard(card, pickedCards);
   }
 }
 

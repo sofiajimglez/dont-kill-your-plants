@@ -2,8 +2,12 @@ class Game {
   constructor(cardsContainer) {
     this.plant = new Plant();
     this.season = new Season();
-    this.cards = [new WaterCard(cardsContainer, this.onClickCard), new WaterCard(cardsContainer, this.onClickCard), 
-      new WaterCard(cardsContainer, this.onClickCard), new WaterCard(cardsContainer, this.onClickCard), new WaterCard(cardsContainer, this.onClickCard)];
+    this.cards = [
+      new WaterCard(cardsContainer, this.onClickCard.bind(this)), 
+      new MedicineCard(cardsContainer, this.onClickCard.bind(this)), 
+      new TransplantCard(cardsContainer, this.onClickCard.bind(this)), 
+      new WaterPlusCard(cardsContainer, this.onClickCard.bind(this)), 
+      new PruneCard(cardsContainer, this.onClickCard.bind(this))];
     this.pickedCards = [];
     this.rounds = 0;
     this.randomEvents = ['Mom', 'Cat', 'Happy', 'Plague'];
@@ -33,11 +37,12 @@ class Game {
     }
   }
 
+
+
   onClickCard(mode, card) {
-    //TODO: QUE HAGA UNA COSA U OTRA DEPENDIENDO DEL MODE
-    console.log(this.plant);
     if (mode === 'use') {
       card.use(this.plant);
+      card.discard(card, this.pickedCards);
     } else if (mode === 'discard') {
       card.discard(card, this.pickedCards);
     }

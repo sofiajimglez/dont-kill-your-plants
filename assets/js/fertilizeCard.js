@@ -8,8 +8,8 @@ class FertilizeCard extends Card {
     plant.health += 2;
   }
 
-  discard(this, pickedCards) {
-    super.discard(this, pickedCards);
+  discard(card, pickedCards) {
+    super.discard(card, pickedCards);
   }
     
 }

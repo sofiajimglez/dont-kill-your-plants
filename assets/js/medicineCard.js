@@ -9,8 +9,8 @@ class MedicineCard extends Card {
     //TODO: QUITAR ESTADO PLAGUE. QUE PLANT.ILLNESS PASE DE TRUE A FALSE
   }
 
-  discard(this, pickedCards) {
-    super.discard(this, pickedCards);
+  discard(card, pickedCards) {
+    super.discard(card, pickedCards);
   }
 }
 
