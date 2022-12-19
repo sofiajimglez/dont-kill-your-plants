@@ -2,8 +2,8 @@ class Plant {
   constructor() {
     this.sunlight = 5;
     this.water = 5;
-    this.space = 10;
-    this.health = 10;
+    this.space = 8;
+    this.health = 8;
     this.illness = false;
   };
 
@@ -11,7 +11,8 @@ class Plant {
     //TODO: que cambie la ilustración de la planta
   };
 
-  die() {
-    alert("Oh, no! The plant couldn't make it :(")
+  isAlive() {
+    const plantStats = [this.sunlight, this.water, this.space, this.health];
+    return plantStats.every((stat) => stat > 0);
   };
 }

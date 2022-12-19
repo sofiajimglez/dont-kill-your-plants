@@ -1,11 +1,16 @@
-class PruneCard extends Card {
+class WaterPlusCard extends Card {
   constructor(cardsContainer, onClickCard) {
     super(cardsContainer, onClickCard);
   }
 
   use(plant) {
     super.use(plant);
-    plant.space += 1;
+    if (plant.water + 3 > 10) {
+      plant.water = 10;
+      plant.healt -= 1;
+    } else {
+      plant.water += 3;
+    }
   }
 
   discard(card, pickedCards) {

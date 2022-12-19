@@ -5,7 +5,12 @@ class WindowCard extends Card {
 
   use(plant) {
     super.use(plant);
-    plant.sunlight += 2;
+    if (plant.sunlight + 2 > 10) {
+      plant.sunlight = 10;
+      plant.health -= 1;
+    } else {
+      plant.sunlight += 2;
+    }
   }
 
   discard(card, pickedCards) {

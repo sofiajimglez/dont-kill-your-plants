@@ -3,14 +3,36 @@ class Game {
     this.plant = new Plant();
     this.season = new Season();
     this.cards = [
-      new WaterCard(cardsContainer, this.onClickCard.bind(this)), 
-      new MedicineCard(cardsContainer, this.onClickCard.bind(this)), 
-      new TransplantCard(cardsContainer, this.onClickCard.bind(this)), 
-      new WaterPlusCard(cardsContainer, this.onClickCard.bind(this)), 
-      new PruneCard(cardsContainer, this.onClickCard.bind(this))];
+      new CaressCard(cardsContainer, this.onClickCard.bind(this)),
+      new FertilizeCard(cardsContainer, this.onClickCard.bind(this)),
+      new FertilizeCard(cardsContainer, this.onClickCard.bind(this)),
+      new FertilizeCard(cardsContainer, this.onClickCard.bind(this)),
+      new MedicineCard(cardsContainer, this.onClickCard.bind(this)),
+      new MedicineCard(cardsContainer, this.onClickCard.bind(this)),
+      new PlayCard(cardsContainer, this.onClickCard.bind(this)),
+      new PruneCard(cardsContainer, this.onClickCard.bind(this)),
+      new PruneCard(cardsContainer, this.onClickCard.bind(this)),
+      new PruneCard(cardsContainer, this.onClickCard.bind(this)),
+      new TalkCard(cardsContainer, this.onClickCard.bind(this)),
+      new TalkCard(cardsContainer, this.onClickCard.bind(this)),
+      new TalkCard(cardsContainer, this.onClickCard.bind(this)),
+      new TransplantCard(cardsContainer, this.onClickCard.bind(this)),
+      new TransplantCard(cardsContainer, this.onClickCard.bind(this)),
+      new TransplantCard(cardsContainer, this.onClickCard.bind(this)),
+      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
+      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
+      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
+      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
+      new WaterPlusCard(cardsContainer, this.onClickCard.bind(this)),
+      new WaterPlusCard(cardsContainer, this.onClickCard.bind(this)),
+      new WindowCard(cardsContainer, this.onClickCard.bind(this)),
+      new WindowCard(cardsContainer, this.onClickCard.bind(this)),
+      new WindowCard(cardsContainer, this.onClickCard.bind(this))
+    ];
     this.pickedCards = [];
     this.rounds = 0;
-    this.randomEvents = ['Mom', 'Cat', 'Happy', 'Plague'];
+    this.maxRounds = 20;
+    this.randomEvents = ['Mom','Cat', 'Happy', 'Plague'];
   };
 
   start() {
@@ -37,16 +59,86 @@ class Game {
     }
   }
 
-
-
   onClickCard(mode, card) {
     if (mode === 'use') {
       card.use(this.plant);
       card.discard(card, this.pickedCards);
+      this.nextRound();
     } else if (mode === 'discard') {
+      console.log(card);
       card.discard(card, this.pickedCards);
+      this.nextRound();
     }
+    console.log(this.pickedCards);
+  }
 
+  updateUI() {
+    const round = document.getElementById('round-info');
+    round.innerText = this.rounds;
+    const sunlightStat = document.getElementById('sunlight');
+    sunlightStat.innerText = this.plant.sunlight;
+    const waterStat = document.getElementById('water');
+    waterStat.innerText = this.plant.water;
+    const spaceStat = document.getElementById('space');
+    spaceStat.innerText = this.plant.space;
+    const healthStat = document.getElementById('health');
+    healthStat.innerText = this.plant.health;
+    const seasonName = document.getElementById('season-info');
+    seasonName.innerText = this.season.getSeasonName(this.rounds);
+  }
+
+  nextRound() {
+    if (!this.isGameOver()) {
+      this.rounds += 1;
+      if (this.plant.illness) {
+        this.plant.health -= 1
+      };
+      this.updateUI();
+      this.pickCards();
+      setTimeout(() => {
+        this.season.checkSeason(this.rounds, this.plant);
+        this.updateUI();
+      }, 2000);
+      setTimeout(() => {
+        this.randomEvent(0.15);
+        this.updateUI();
+      }, 3000);
+    }
+  }
+
+  isGameOver() {
+    if (this.rounds < this.maxRounds && this.plant.isAlive()) {
+      return false;
+    } else if (this.rounds === this.maxRounds && this.plant.isAlive()) {
+      alert('You win!');
+      return true;
+    } else if (!this.plant.isAlive()) {
+      alert('Oh, no! The plant is dead!');
+      return true;
+    };
+  }
+
+  randomEvent(prob) {
+    let event = '';
+    if (Math.random() < prob) {
+      event = this.randomEvents[Math.floor(Math.random() * this.randomEvents.length)]
+      switch (event) {
+        case 'Cat':
+          randomEventCat(this.plant);
+          break;
+        case 'Happy':
+          randomEventHappy(this.plant);
+          break;
+        case 'Mom':
+          randomEventMom(this.plant);
+          break;
+        case 'Plague':
+          randomEventPlague(this.plant);
+          break;
+      }
+    }
   }
 
 }
+
+

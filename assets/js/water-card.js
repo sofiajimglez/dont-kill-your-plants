@@ -1,12 +1,16 @@
-class MedicineCard extends Card {
+class WaterCard extends Card {
   constructor(cardsContainer, onClickCard) {
     super(cardsContainer, onClickCard);
   }
 
   use(plant) {
     super.use(plant);
-    plant.health += 1;
-    //TODO: QUITAR ESTADO PLAGUE. QUE PLANT.ILLNESS PASE DE TRUE A FALSE
+    if (plant.water + 1 > 10) {
+      plant.water = 10;
+      plant.healt -= 1;
+    } else {
+      plant.water += 1;
+    }
   }
 
   discard(card, pickedCards) {

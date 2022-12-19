@@ -1,7 +1,3 @@
-function createDeck() {
-  const DECK = [
+function createDeck(cardsContainer) {
 
-  ];
-
-  return DECK;
 }

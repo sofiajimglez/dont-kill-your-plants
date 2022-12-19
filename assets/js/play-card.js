@@ -1,15 +1,14 @@
-class WaterPlusCard extends Card {
+class PlayCard extends Card {
   constructor(cardsContainer, onClickCard) {
     super(cardsContainer, onClickCard);
   }
 
   use(plant) {
     super.use(plant);
-    plant.water += 3;
+    plant.health -= 1;
   }
 
   discard(card, pickedCards) {
     super.discard(card, pickedCards);
   }
 }
-

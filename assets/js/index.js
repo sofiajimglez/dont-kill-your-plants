@@ -3,11 +3,12 @@ const game = new Game('cards-container');
 
 const startBtn = document.getElementById('start');
 
-const round = document.getElementById('round-info');
+
 
 
 startBtn.onclick = () => {
   game.start();
+  game.updateUI();
   console.log(game.cards);
   console.log(game.pickedCards);
 };
