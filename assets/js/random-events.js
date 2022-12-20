@@ -4,7 +4,11 @@ function randomEventCat(plant) {
 };
 
 function randomEventHappy(plant) {
-    plant.health = plant.health + 2;
+    if (plant.health + 2 > 10) {
+        plant.healt = 10;
+    } else {
+        plant.health = plant.health + 2;
+    }
     alert('Your plant woke up very happy today! Nice!');
 };
 

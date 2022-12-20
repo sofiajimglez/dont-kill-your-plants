@@ -1,6 +1,6 @@
 body {
-    background-color: #f4f4f4;
-    padding: 30px;;
+    background-image: url('../images/background-1.jpg');
+    padding: 30px;
 }
 
 .game-container {
@@ -26,6 +26,8 @@ body {
     color: #f4f4f4;
     background-color: green;
     padding: 5px;
+    width: 200px;
+    height: 250px;
 }
 
 .card-btns {

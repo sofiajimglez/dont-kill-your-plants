@@ -2,33 +2,7 @@ class Game {
   constructor(cardsContainer) {
     this.plant = new Plant();
     this.season = new Season();
-    this.cards = [
-      new CaressCard(cardsContainer, this.onClickCard.bind(this)),
-      new FertilizeCard(cardsContainer, this.onClickCard.bind(this)),
-      new FertilizeCard(cardsContainer, this.onClickCard.bind(this)),
-      new FertilizeCard(cardsContainer, this.onClickCard.bind(this)),
-      new MedicineCard(cardsContainer, this.onClickCard.bind(this)),
-      new MedicineCard(cardsContainer, this.onClickCard.bind(this)),
-      new PlayCard(cardsContainer, this.onClickCard.bind(this)),
-      new PruneCard(cardsContainer, this.onClickCard.bind(this)),
-      new PruneCard(cardsContainer, this.onClickCard.bind(this)),
-      new PruneCard(cardsContainer, this.onClickCard.bind(this)),
-      new TalkCard(cardsContainer, this.onClickCard.bind(this)),
-      new TalkCard(cardsContainer, this.onClickCard.bind(this)),
-      new TalkCard(cardsContainer, this.onClickCard.bind(this)),
-      new TransplantCard(cardsContainer, this.onClickCard.bind(this)),
-      new TransplantCard(cardsContainer, this.onClickCard.bind(this)),
-      new TransplantCard(cardsContainer, this.onClickCard.bind(this)),
-      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
-      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
-      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
-      new WaterCard(cardsContainer, this.onClickCard.bind(this)),
-      new WaterPlusCard(cardsContainer, this.onClickCard.bind(this)),
-      new WaterPlusCard(cardsContainer, this.onClickCard.bind(this)),
-      new WindowCard(cardsContainer, this.onClickCard.bind(this)),
-      new WindowCard(cardsContainer, this.onClickCard.bind(this)),
-      new WindowCard(cardsContainer, this.onClickCard.bind(this))
-    ];
+    this.cards = createDeck(cardsContainer,this.onClickCard.bind(this));
     this.pickedCards = [];
     this.rounds = 0;
     this.maxRounds = 20;
