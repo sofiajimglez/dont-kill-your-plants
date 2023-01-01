@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik+Bubbles&display=swap');
+/*
+font-family: 'Pangolin', cursive;
+font-family: 'Rubik Bubbles', cursive;
+*/
+
 body {
-    background-image: url('../images/background-1.jpg');
+    background-image: url('../images/background-2.jpg');
     padding: 30px;
+    font-family: 'Pangolin', cursive;
+}
+
+.season-info {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 20px;
 }
 
 .game-container {
