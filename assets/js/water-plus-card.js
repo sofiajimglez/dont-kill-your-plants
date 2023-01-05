@@ -16,5 +16,10 @@ class WaterPlusCard extends Card {
   discard(card, pickedCards) {
     super.discard(card, pickedCards);
   }
+
+  render() {
+    super.render();
+    this.cardNode.classList.add('water-plus-bg');
+  }
 }
 

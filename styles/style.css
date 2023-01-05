@@ -11,7 +11,6 @@ body {
 }
 
 .season-info {
-    font-family: 'Rubik Bubbles', cursive;
     font-size: 20px;
 }
 
@@ -36,14 +35,66 @@ body {
 
 .card {
     color: #f4f4f4;
-    background-color: green;
-    padding: 5px;
-    width: 200px;
-    height: 250px;
+    width: 300px;
+    height: 375px;
 }
 
 .card-btns {
     display: flex;
     flex-direction: column;
     margin: 5px;
+}
+
+.plant-img {
+    width: 500px;
+}
+
+.caress-bg {
+    background-image: url(/images/caress-card.png);
+    background-size: contain;
+}
+
+.fertilize-bg {
+    background-image: url(/images/fertilize-card.png);
+    background-size: contain;
+}
+
+.medicine-bg {
+    background-image: url(/images/medicine-card.png);
+    background-size: contain;
+}
+
+.play-bg {
+    background-image: url(/images/play-card.png);
+    background-size: contain;
+}
+
+.prune-bg {
+    background-image: url(/images/prune-card.png);
+    background-size: contain;
+}
+
+.talk-bg {
+    background-image: url(/images/talk-card.png);
+    background-size: contain;
+}
+
+.transplant-bg {
+    background-image: url(/images/transplant-card.png);
+    background-size: contain;
+}
+
+.water-bg {
+    background-image: url(/images/water-card.png);
+    background-size: contain;
+}
+
+.water-plus-bg {
+    background-image: url(/images/water-plus-card.png);
+    background-size: contain;
+}
+
+.window-bg {
+    background-image: url(/images/window-card.png);
+    background-size: contain;
 }

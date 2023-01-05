@@ -11,4 +11,9 @@ class PlayCard extends Card {
   discard(card, pickedCards) {
     super.discard(card, pickedCards);
   }
+
+  render() {
+    super.render();
+    this.cardNode.classList.add('play-bg');
+  }
 }
