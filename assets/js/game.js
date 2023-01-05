@@ -49,14 +49,27 @@ class Game {
   updateUI() {
     const round = document.getElementById('round-info');
     round.innerText = this.rounds;
+
     const sunlightStat = document.getElementById('sunlight');
     sunlightStat.innerText = this.plant.sunlight;
+    const sunlightBar = document.getElementById('progress-bar-sunlight');
+    sunlightBar.style.width = `${this.plant.sunlight * 10}%`;
+
     const waterStat = document.getElementById('water');
     waterStat.innerText = this.plant.water;
+    const waterBar = document.getElementById('progress-bar-water');
+    waterBar.style.width = `${this.plant.water * 10}%`;
+
     const spaceStat = document.getElementById('space');
     spaceStat.innerText = this.plant.space;
+    const spaceBar = document.getElementById('progress-bar-space');
+    spaceBar.style.width = `${this.plant.space * 10}%`;
+
     const healthStat = document.getElementById('health');
     healthStat.innerText = this.plant.health;
+    const healthBar = document.getElementById('progress-bar-health');
+    healthBar.style.width = `${this.plant.health * 10}%`;
+
     const seasonName = document.getElementById('season-info');
     seasonName.innerText = this.season.getSeasonName(this.rounds);
   }

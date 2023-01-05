@@ -20,11 +20,30 @@
         <h3>Round: <span id="round-info">0</span></h3>
       </div>
 
-      <div id="plant-stats">
-        <p>Sunlight: <span id="sunlight"></span></p>
-        <p>Water: <span id="water"></span></p>
-        <p>Space: <span id="space"></span></p>
-        <p>Health: <span id="health"></span></p>
+      <div id="plant-stats" class="plant-stats">
+        <div class="bar-bg">
+          <div id="progress-bar-sunlight" class="progress-bar-sunlight">
+            <p><i class="fa-solid fa-sun"></i> Sunlight: <span id="sunlight"></span></p>
+          </div>
+        </div>
+        
+        <div class="bar-bg">
+          <div id="progress-bar-water" class="progress-bar-water">
+            <p><i class="fa-solid fa-droplet"></i> Water: <span id="water"></span></p>
+          </div>
+        </div>
+        
+        <div class="bar-bg">
+          <div id="progress-bar-space" class="progress-bar-space">
+            <p><i class="fa-solid fa-leaf"></i> Space: <span id="space"></span></p>
+          </div>
+        </div>
+        
+        <div class="bar-bg">
+          <div id="progress-bar-health" class="progress-bar-health">
+            <p><i class="fa-solid fa-heart-pulse"></i> Health: <span id="health"></span></p>
+          </div>
+        </div>
       </div>
 
       <div id="cards-container" class="cards-container"></div>
@@ -38,6 +57,7 @@
   </div>
 
   <p>Original art, game and idea by Sofía Jiménez</p>
+  <script src="https://kit.fontawesome.com/7d777f035f.js" crossorigin="anonymous"></script>
   <script src="./assets/js/deck.js"></script>
   <script src="./assets/js/random-events.js"></script>
   <script src="./assets/js/card.js"></script>

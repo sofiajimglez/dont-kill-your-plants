@@ -5,27 +5,119 @@ font-family: 'Rubik Bubbles', cursive;
 */
 
 body {
-    background-image: url('../images/background-2.jpg');
-    padding: 30px;
+    background-image: url('../images/background-1.jpg');
     font-family: 'Pangolin', cursive;
-}
-
-.season-info {
-    font-size: 20px;
 }
 
 .game-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+/*TOP INFO*/
+
+.season-info {
+    font-size: 20px;
 }
 
 .top-info {
+    width: 50%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 15px 0;
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 25px;
+    color: #15400a;
 }
+
+.season-info {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 30px;
+}
+
+/*PLANT STATS*/
+
+.plant-stats {
+    background-color: rgba(89, 143, 71, 0.6);
+    padding: 15px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.bar-bg {
+    background-color: rgba(221, 237, 212, 0.5);
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.bar-bg p {
+    margin-left: 20px;
+}
+
+.fa-solid {
+    margin-right: 5px;
+    color: #15400a;
+}
+
+.progress-bar-sunlight {
+    background-color: rgba(231, 170, 71, 0.8);
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: width 2s;
+}
+
+.progress-bar-water {
+    background-color: rgba(231, 170, 71, 0.8);
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: width 2s;
+}
+
+.progress-bar-space {
+    background-color: rgba(231, 170, 71, 0.8);
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: width 2s;
+}
+
+.progress-bar-health {
+    background-color: rgba(231, 170, 71, 0.8);
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: width 2s;
+}
+
+
+
+/*CARDS CSS*/
 
 .cards-container {
     display: flex;
@@ -37,17 +129,40 @@ body {
     color: #f4f4f4;
     width: 300px;
     height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
+    margin-bottom: 50px;
+}
+
+.card > button {
+    display: none;
+}
+
+.card:hover > button {
+    display: block;
 }
 
 .card-btns {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+    padding: 10px 35px;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    color: #36592d;
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 18px;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.plant-img {
-    width: 500px;
+.card-btns:hover {
+    color: white;
+    background-color: #e7aa47;
 }
+
+/*CARDS BACKGROUNDS*/
 
 .caress-bg {
     background-image: url(/images/caress-card.png);
@@ -97,4 +212,10 @@ body {
 .window-bg {
     background-image: url(/images/window-card.png);
     background-size: contain;
+}
+
+/*PLANT*/
+
+.plant-img {
+    width: 500px;
 }
