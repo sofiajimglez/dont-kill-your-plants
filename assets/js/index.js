@@ -2,11 +2,11 @@
 const game = new Game('cards-container');
 
 const startBtn = document.getElementById('start');
+const homePage = document.getElementById('home-page');
 
 startBtn.onclick = () => {
   game.start();
   game.updateUI();
-  console.log(game.cards);
-  console.log(game.pickedCards);
+  homePage.classList.add('hidden');
 };
 

@@ -5,9 +5,73 @@ font-family: 'Rubik Bubbles', cursive;
 */
 
 body {
-    background-image: url('../images/background-1.jpg');
+    background-image: url(/images/background-1.jpg);
     font-family: 'Pangolin', cursive;
 }
+
+/*HOME PAGE*/
+
+.home-page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/images/background-1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.logo {
+    width: 40%;
+}
+
+.home-btn {
+    width: 200px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: #e7aa47;
+    border: 3px solid #e7aa47;
+    border-radius: 10px;
+    letter-spacing: 4px;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.home-btn:hover {
+    color: #e7aa47;
+    background-color: white;
+    border: 3px solid #e7aa47;
+}
+
+.credits-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+}
+
+.credits-info i {
+    color: #36592d;
+}
+
+.credits-info i:hover {
+    color: #e7aa47;
+}
+
+/*GAME CONTAINTER*/
 
 .game-container {
     display: flex;
