@@ -10,7 +10,8 @@ class TransplantCard extends Card {
     } else {
       plant.space += 5;
     }
-    //TODO: EJECUTAR MÉTODO GROW DE LA PLANTA
+    
+    plant.grow();
   }
 
   discard(card, pickedCards) {

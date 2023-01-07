@@ -8,7 +8,19 @@ class Plant {
   };
 
   grow() {
-    //TODO: que cambie la ilustración de la planta
+    const plantImg = document.getElementById('plant-img');
+    console.log('holi');
+
+    if (plantImg.classList.contains('plant-img-01')) {
+      plantImg.classList.remove('plant-img-01');
+      plantImg.classList.add('plant-img-02');
+    } else if (plantImg.classList.contains('plant-img-02')) {
+      plantImg.classList.remove('plant-img-02');
+      plantImg.classList.add('plant-img-03');
+    } else if (plantImg.classList.contains('plant-img-03')) {
+      plantImg.classList.remove('plant-img-03');
+      plantImg.classList.add('plant-img-04');
+    }
   };
 
   isAlive() {

@@ -12,7 +12,7 @@ body {
 .game-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -136,6 +136,7 @@ body {
     gap: 15px;
     box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
     margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 .card > button {
@@ -144,6 +145,7 @@ body {
 
 .card:hover > button {
     display: block;
+    cursor: pointer;
 }
 
 .card-btns {
@@ -217,5 +219,26 @@ body {
 /*PLANT*/
 
 .plant-img {
-    width: 500px;
+    width: 600px;
+    height: 750px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 3s ease-in-out;
+}
+
+.plant-img-01 {
+    background-image: url(/images/plant-img-01.png);
+}
+
+.plant-img-02 {
+    background-image: url(/images/plant-img-02.png);
+}
+
+.plant-img-03 {
+    background-image: url(/images/plant-img-03.png);
+}
+
+.plant-img-04 {
+    background-image: url(/images/plant-img-04.png);
 }
