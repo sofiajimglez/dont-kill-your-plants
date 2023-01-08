@@ -108,11 +108,11 @@ class Game {
         this.season.checkSeason(this.rounds, this.plant);
         this.updateUI();
         this.isGameOver();
-      }, 2000);
+      }, 1000);
       setTimeout(() => {
-        this.randomEvent(0.10);
+        this.randomEvent(0.15);
         this.updateUI();
-      }, 2000);
+      }, 3000);
     };
   }
 

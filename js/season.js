@@ -62,7 +62,7 @@ class Season {
 
 }
 
-function randomNumber(prob = 0.9) {
+function randomNumber(prob = 0.8) {
   let randomNum = Math.random(); 
   if (randomNum < prob) {
     return 1;
