@@ -5,7 +5,7 @@ font-family: 'Rubik Bubbles', cursive;
 */
 
 body {
-    background-image: url(/images/background-1.jpg);
+    background-image: url(../images/background-1.jpg);
     font-family: 'Pangolin', cursive;
 }
 
@@ -25,7 +25,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(/images/background-1.jpg);
+    background-image: url(../images/background-1.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -244,52 +244,52 @@ body {
 /*CARDS BACKGROUNDS*/
 
 .caress-bg {
-    background-image: url(/images/caress-card.png);
+    background-image: url(../images/caress-card.png);
     background-size: contain;
 }
 
 .fertilize-bg {
-    background-image: url(/images/fertilize-card.png);
+    background-image: url(../images/fertilize-card.png);
     background-size: contain;
 }
 
 .medicine-bg {
-    background-image: url(/images/medicine-card.png);
+    background-image: url(../images/medicine-card.png);
     background-size: contain;
 }
 
 .play-bg {
-    background-image: url(/images/play-card.png);
+    background-image: url(../images/play-card.png);
     background-size: contain;
 }
 
 .prune-bg {
-    background-image: url(/images/prune-card.png);
+    background-image: url(../images/prune-card.png);
     background-size: contain;
 }
 
 .talk-bg {
-    background-image: url(/images/talk-card.png);
+    background-image: url(../images/talk-card.png);
     background-size: contain;
 }
 
 .transplant-bg {
-    background-image: url(/images/transplant-card.png);
+    background-image: url(../images/transplant-card.png);
     background-size: contain;
 }
 
 .water-bg {
-    background-image: url(/images/water-card.png);
+    background-image: url(../images/water-card.png);
     background-size: contain;
 }
 
 .water-plus-bg {
-    background-image: url(/images/water-plus-card.png);
+    background-image: url(../images/water-plus-card.png);
     background-size: contain;
 }
 
 .window-bg {
-    background-image: url(/images/window-card.png);
+    background-image: url(../images/window-card.png);
     background-size: contain;
 }
 
@@ -305,19 +305,19 @@ body {
 }
 
 .plant-img-01 {
-    background-image: url(/images/plant-img-01.png);
+    background-image: url(../images/plant-img-01.png);
 }
 
 .plant-img-02 {
-    background-image: url(/images/plant-img-02.png);
+    background-image: url(../images/plant-img-02.png);
 }
 
 .plant-img-03 {
-    background-image: url(/images/plant-img-03.png);
+    background-image: url(../images/plant-img-03.png);
 }
 
 .plant-img-04 {
-    background-image: url(/images/plant-img-04.png);
+    background-image: url(../images/plant-img-04.png);
 }
 
 /*GALLERY*/
