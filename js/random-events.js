@@ -5,7 +5,7 @@ function randomEventCat(plant) {
 
 function randomEventHappy(plant) {
     if (plant.health + 2 > 10) {
-        plant.healt = 10;
+        plant.health = 10;
     } else {
         plant.health = plant.health + 2;
     }
@@ -15,7 +15,7 @@ function randomEventHappy(plant) {
 function randomEventMom(plant) {
     if (plant.water + 1 > 10) {
         plant.water = 10;
-        plant.healt -= 1;
+        plant.health -= 1;
         alert('Your mother has watered the plant more than desirable! MOM!!! >:(');
       } else {
         plant.water += 1;

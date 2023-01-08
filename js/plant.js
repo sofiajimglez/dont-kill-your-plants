@@ -9,7 +9,6 @@ class Plant {
 
   grow() {
     const plantImg = document.getElementById('plant-img');
-    console.log('holi');
 
     if (plantImg.classList.contains('plant-img-01')) {
       plantImg.classList.remove('plant-img-01');

@@ -1,7 +1,6 @@
 const popup = document.getElementById('popup');
 
 const selectedImage = document.getElementById('selected-img');
-const selectedIndex = null;
 
 const imageIndexes = document.querySelectorAll('.gallery-img');
 

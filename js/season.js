@@ -6,7 +6,7 @@ class Season {
     } else {
       plant.health += 1;
     }
-    plant.space -= 1;
+    plant.space -= randomNumber();
   };
 
   summer(plant) {
@@ -15,7 +15,7 @@ class Season {
     } else {
       plant.sunlight += 1;
     }
-    plant.water -= 1;
+    plant.water -= randomNumber();
   };
 
   fall(plant) {
@@ -24,7 +24,7 @@ class Season {
     } else {
       plant.water += 1;
     }
-    plant.sunlight -= 1;
+    plant.sunlight -= randomNumber();
   };
 
   winter(plant) {
@@ -33,7 +33,7 @@ class Season {
     } else {
       plant.space += 1;
     }
-    plant.health -= 1;
+    plant.health -= randomNumber();
   };
 
   checkSeason(round, plant) {
@@ -60,4 +60,13 @@ class Season {
     }
   }
 
+}
+
+function randomNumber(prob = 0.9) {
+  let randomNum = Math.random(); 
+  if (randomNum < prob) {
+    return 1;
+  } else {
+    return 2;
+  }
 }

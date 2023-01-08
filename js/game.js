@@ -39,11 +39,9 @@ class Game {
       card.discard(card, this.pickedCards);
       this.nextRound();
     } else if (mode === 'discard') {
-      console.log(card);
       card.discard(card, this.pickedCards);
       this.nextRound();
     }
-    console.log(this.pickedCards);
   }
 
   updateUI() {
@@ -54,21 +52,45 @@ class Game {
     sunlightStat.innerText = this.plant.sunlight;
     const sunlightBar = document.getElementById('progress-bar-sunlight');
     sunlightBar.style.width = `${this.plant.sunlight * 10}%`;
+    if (this.plant.sunlight <= 0) {
+      setTimeout(() => {
+        alert('Oh, no! The plant is dead!');
+        window.location.reload();
+      }, 2000);
+    } 
 
     const waterStat = document.getElementById('water');
     waterStat.innerText = this.plant.water;
     const waterBar = document.getElementById('progress-bar-water');
     waterBar.style.width = `${this.plant.water * 10}%`;
+    if (this.plant.water <= 0) {
+      setTimeout(() => {
+        alert('Oh, no! The plant is dead!');
+        window.location.reload(); 
+      }, 2000);
+    } 
 
     const spaceStat = document.getElementById('space');
     spaceStat.innerText = this.plant.space;
     const spaceBar = document.getElementById('progress-bar-space');
     spaceBar.style.width = `${this.plant.space * 10}%`;
+    if (this.plant.space <= 0) {
+      setTimeout(() => {
+        alert('Oh, no! The plant is dead!');
+        window.location.reload();
+      }, 2000);
+    } 
 
     const healthStat = document.getElementById('health');
     healthStat.innerText = this.plant.health;
     const healthBar = document.getElementById('progress-bar-health');
     healthBar.style.width = `${this.plant.health * 10}%`;
+    if (this.plant.health <= 0) {
+      setTimeout(() => {
+        alert('Oh, no! The plant is dead!');
+        window.location.reload();
+      }, 2000);
+    } 
 
     const seasonName = document.getElementById('season-info');
     seasonName.innerText = this.season.getSeasonName(this.rounds);
@@ -85,12 +107,13 @@ class Game {
       setTimeout(() => {
         this.season.checkSeason(this.rounds, this.plant);
         this.updateUI();
+        this.isGameOver();
       }, 2000);
       setTimeout(() => {
-        this.randomEvent(0.15);
+        this.randomEvent(0.10);
         this.updateUI();
-      }, 3000);
-    }
+      }, 2000);
+    };
   }
 
   isGameOver() {
@@ -98,14 +121,12 @@ class Game {
       return false;
     } else if (this.rounds === this.maxRounds && this.plant.isAlive()) {
       alert('You win!');
+      window.location.reload();
       return true;
-    } else if (!this.plant.isAlive()) {
-      alert('Oh, no! The plant is dead!');
-      return true;
-    };
+    } 
   }
 
-  randomEvent(prob) {
+  randomEvent(prob = 0.15) {
     let event = '';
     if (Math.random() < prob) {
       event = this.randomEvents[Math.floor(Math.random() * this.randomEvents.length)]
@@ -125,9 +146,6 @@ class Game {
       }
     }
   }
-
-  
-
 }
 
 
