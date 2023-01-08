@@ -34,12 +34,15 @@ class Game {
   }
 
   onClickCard(mode, card) {
+    const buttonAudio = new Audio('../audio/clic-btn.mp3');
     if (mode === 'use') {
       card.use(this.plant);
+      buttonAudio.play();
       card.discard(card, this.pickedCards);
       this.nextRound();
     } else if (mode === 'discard') {
       card.discard(card, this.pickedCards);
+      buttonAudio.play();
       this.nextRound();
     }
   }

@@ -50,13 +50,13 @@ class Season {
 
   getSeasonName(round) {
     if (round >= 0 && round <= 5) {
-      return 'Spring';
+      return '🌸Spring🌸';
     } else if (round > 5 && round <= 10) {
-      return 'Summer';
+      return '🌞Summer🌞';
     } else if (round > 10 && round <= 15) {
-      return 'Fall';
+      return '🍂Fall🍂';
     } else if (round > 15 && round <= 20) {
-      return 'Winter';
+      return '⛄Winter⛄';
     }
   }
 
