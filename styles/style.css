@@ -72,6 +72,7 @@ body {
     justify-content: center;
     gap: 15px;
     font-size: 22px;
+    margin-top: 20px;
 }
 
 .credits-info i {
@@ -309,9 +310,15 @@ body {
     background-image: url(../images/plant-img-04.png);
 }
 
-/*GALLERY*/
+/*HOW TO PLAY*/
 
-h1 {
+.instructions-container {
+    max-width: 1600px;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+.instructions-container h1 {
     font-family: 'Rubik Bubbles', cursive;
     font-size: 46px;
     color: #15400a;
@@ -319,7 +326,27 @@ h1 {
     margin: 20px 0;
 }
 
-h2 {
+.instructions-container h2 {
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.instructions-container p, ul {
+    font-size: 18px;
+}
+
+/*GALLERY*/
+
+.gallery-container h1 {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 46px;
+    color: #15400a;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+.gallery-container h2 {
     font-size: 26px;
     margin-top: 100px;
     margin-bottom: 25px;
@@ -376,6 +403,7 @@ img#logo-gallery.gallery-img {
 
 .video-gallery iframe {
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 .fa-arrow-left {
