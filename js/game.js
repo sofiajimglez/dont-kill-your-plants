@@ -56,10 +56,15 @@ class Game {
     const sunlightBar = document.getElementById('progress-bar-sunlight');
     sunlightBar.style.width = `${this.plant.sunlight * 10}%`;
     if (this.plant.sunlight <= 0) {
+      Swal.fire({
+        title: 'Game Over', 
+        text: 'Oh, no! The plant is dead! 😭',
+        showConfirmButton: false,
+        customClass: {container: 'alert-container'}
+      });
       setTimeout(() => {
-        alert('Oh, no! The plant is dead!');
-        window.location.reload();
-      }, 2000);
+        window.location.reload(); 
+      }, 8000);
     } 
 
     const waterStat = document.getElementById('water');
@@ -67,10 +72,15 @@ class Game {
     const waterBar = document.getElementById('progress-bar-water');
     waterBar.style.width = `${this.plant.water * 10}%`;
     if (this.plant.water <= 0) {
+      Swal.fire({
+        title: 'Game Over', 
+        text: 'Oh, no! The plant is dead! 😭',
+        showConfirmButton: false,
+        customClass: {container: 'alert-container'}
+      });
       setTimeout(() => {
-        alert('Oh, no! The plant is dead!');
         window.location.reload(); 
-      }, 2000);
+      }, 8000);
     } 
 
     const spaceStat = document.getElementById('space');
@@ -78,10 +88,15 @@ class Game {
     const spaceBar = document.getElementById('progress-bar-space');
     spaceBar.style.width = `${this.plant.space * 10}%`;
     if (this.plant.space <= 0) {
+      Swal.fire({
+        title: 'Game Over', 
+        text: 'Oh, no! The plant is dead! 😭',
+        showConfirmButton: false,
+        customClass: {container: 'alert-container'}
+      });
       setTimeout(() => {
-        alert('Oh, no! The plant is dead!');
-        window.location.reload();
-      }, 2000);
+        window.location.reload(); 
+      }, 8000);
     } 
 
     const healthStat = document.getElementById('health');
@@ -89,10 +104,15 @@ class Game {
     const healthBar = document.getElementById('progress-bar-health');
     healthBar.style.width = `${this.plant.health * 10}%`;
     if (this.plant.health <= 0) {
+      Swal.fire({
+        title: 'Game Over', 
+        text: 'Oh, no! The plant is dead! 😭',
+        showConfirmButton: false,
+        customClass: {container: 'alert-container'}
+      });
       setTimeout(() => {
-        alert('Oh, no! The plant is dead!');
-        window.location.reload();
-      }, 2000);
+        window.location.reload(); 
+      }, 8000);
     } 
 
     const seasonName = document.getElementById('season-info');
@@ -113,7 +133,7 @@ class Game {
         this.isGameOver();
       }, 1000);
       setTimeout(() => {
-        this.randomEvent(0.15);
+        this.randomEvent(0.16); //0.15
         this.updateUI();
       }, 3000);
     };
@@ -123,7 +143,11 @@ class Game {
     if (this.rounds < this.maxRounds && this.plant.isAlive()) {
       return false;
     } else if (this.rounds === this.maxRounds && this.plant.isAlive()) {
-      alert('You win!');
+      Swal.fire({
+        title: 'You win', 
+        text: 'Well done! You are indeed a plant lover 💚',
+        customClass: {container: 'alert-container'}
+      });
       window.location.reload();
       return true;
     } 
