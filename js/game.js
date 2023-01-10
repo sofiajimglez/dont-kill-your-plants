@@ -133,7 +133,7 @@ class Game {
         this.isGameOver();
       }, 1000);
       setTimeout(() => {
-        this.randomEvent(0.16); //0.15
+        this.randomEvent(0.15); 
         this.updateUI();
       }, 3000);
     };
@@ -146,9 +146,12 @@ class Game {
       Swal.fire({
         title: 'You win', 
         text: 'Well done! You are indeed a plant lover 💚',
+        showConfirmButton: false,
         customClass: {container: 'alert-container'}
       });
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload(); 
+      }, 8000);
       return true;
     } 
   }
